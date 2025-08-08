@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PiecePrint- سفارش آنلاین تیشرت با طرح شم</title>
+    <link rel="icon" type="image/jpeg" href="src/favicon.jpg">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Funnel+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zain:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <img src="src/logo.jpg" alt="PiecePrint Logo" class="logo-image">
+            </div>
+            <nav class="nav">
+                <a href="#home" class="nav-link active">پیس پرینت</a>
+                <a href="#design" class="nav-link">طراحی</a>
+                <a href="#contact" class="nav-link">تماس</a>
+            </nav>
+        </header>
+
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>تیشرت سفارشی با قطعه</h1>
+                <p>طرحتو بیار - تیشرت شخص تحویل بگیر ...</p>
+                <button class="cta-button" onclick="scrollToSection('design')">
+                    شروع طراحی
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+            </div>
+            <div class="hero-image">
+                <div class="tshirt-preview">
+                    <img src="src/logo.jpg" alt="PiecePrint Logo" class="logo-header">
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Section -->
+        <section id="design" class="design-section">
+            <h2>طراحی تیشرت</h2>
+            <div class="design-container">
+                <div class="design-panel">
+                    <h3>ابزارهای طراحی</h3>
+                    
+                    <!-- Color Selection -->
+                    <div class="design-tool-section">
+                        <h4>انتخاب رنگ تیشرت</h4>
+                        <div class="color-palette">
+                            <button class="palette-color" data-color="#fafafa" style="background:#fafafa"></button>
+                            <button class="palette-color" data-color="#3d3d3d" style="background:#3d3d3d"></button>
+                            <button class="palette-color" data-color="#3a61e0" style="background:#3a61e0"></button>
+                            <button class="palette-color" data-color="#c71e1e" style="background:#c71e1e"></button>
+                            <button class="palette-color" data-color="#0f0f0f" style="background:#0f0f0f"></button>
+                            <button class="palette-color" data-color="#f7f7f7" style="background:#f7f7f7"></button>
+                        </div>
+                    </div>
+
+                    <!-- Image Upload -->
+                    <div class="design-tool-section">
+                        <h4>آپلود تصویر</h4>
+                        <div class="image-upload-wrapper">
+                            <input type="file" id="tshirtImageUpload" accept="image/png, image/jpeg, image/svg+xml" style="display:none;">
+                            <label for="tshirtImageUpload" class="upload-label">
+                                <i class="fas fa-cloud-upload-alt"></i>
+                                <span>تصویر خود را آپلود کنید</span>
+                                <small>PNG, JPG, SVG</small>
+                            </label>
+                        </div>
+                    </div>
+
+                    <!-- SVG Upload -->
+                    
+                    <!-- Design Instructions -->
+                    <div class="design-instructions">
+                        <h4>راهنمای طراحی</h4>
+                        <ul>
+                            <li>رنگ تیشرت را از پالت بالا انتخاب کنید</li>
+                            <li>تصویر مورد نظر خود را آپلود کنید</li>
+                            <li>تصویر را با موس بکشید تا جابجا کنید</li>
+                            <li>از دستگیره‌های قرمز برای تغییر سایز و چرخش استفاده کنید</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="preview-panel">
+                    <h3>پیش‌نمایش </h3>
+                    <div class="tshirt-preview-large">
+                        <div class="tshirt-svg-large-wrapper" style="display:flex; justify-content:center; align-items:center; position:relative; width:100%; gap:32px;">
+                            <div class="svg-color-container" style="display:flex; flex-direction:column; align-items:center; gap:24px;">
+                                <svg id="mainTshirtSVG" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 729.66 795.54" style="max-width:350px; width:100%; height:auto; display:block;">
+                                  <g id="layer1" transform="translate(.23762 -131.81)">
+                                    <path id="path3072" d="m279.07 142.62c-3.2435-0.0142-16.755 7.1047-23.125 12.188-3.6075 2.8785-41.346 17.27-67.281 25.656-29.333 9.485-37.744 11.801-53.469 14.781-24.619 4.6662-38.647 15.469-50 38.469-3.2153 6.5138-7.033 16.945-8.4688 23.188-1.4359 6.2426-3.2953 12.059-4.125 12.906-0.8298 0.84721-1.5 4.5472-1.5 8.25 0 6.4639-0.6878 7.8454-10.531 21.188-1.3867 1.8794-3.0999 8.2372-3.8125 14.156-0.9405 7.8122-2.3029 11.877-5.0313 14.781-3.1561 3.3596-4.0054 6.6797-5.25 20.688-1.606 18.076-2.3653 21.19-13.438 56.406-8.5227 27.108-15.503 53.837-20.156 77-3.555 17.694-6.5011 43.812-5.4063 48.094 0.3792 1.4824 3.7309 3.8069 7.4375 5.1562s10.827 3.9371 15.812 5.75c27.925 10.154 36.867 11.875 65.156 12.531l27.219 0.625 5.6875 5.6875c4.9604 4.9604 6.6774 5.6875 13.719 5.6875 4.4292 0.00001 8.0635 0.51865 8.0625 1.1875-0.005 3.2771-8.6725 35.69-10.5 39.281-3.2995 6.4831-4.4861 27.051-2.3125 39.781 2.9137 17.066 2.5401 22.889-2.5313 39.688-5.3751 17.804-4.8517 23.68 3.875 43.562 5.8138 13.246 6.1652 19.782 1.7188 31.062-3.703 9.3946-4.156 18.07-1.2188 23.219 1.3778 2.415 2.3285 16.162 3 43.25 0.9952 40.146 3.9057 62.923 8.625 67.781 1.5692 1.6152 4.2664 1.7658 11.625 0.59375 10.822-1.7238 47.065 0.14269 59.844 3.0938 4.4623 1.0305 16.892 4.3162 27.594 7.2812 19.496 5.4016 47.809 11.38 59.969 12.656 3.5672 0.3745 22.201 0.48734 41.375 0.25 28.242-0.34955 38.082-1.1172 51.875-3.9688 28.83-5.9607 43.27-10.546 74.688-23.781 34.565-14.562 59.88-22.277 79.812-24.312 8.1504-0.8322 11.412-1.8805 12.562-4.0312 2.0659-3.8601 1.986-38.558-0.125-54.5-0.924-6.976-3.2156-17.16-5.0938-22.625l-3.4062-9.9062 5.9687-13.938c11.529-26.843 13.216-48.04 4.7813-60.469-3.1424-4.6305-3.8535-7.1719-3.0313-11 9.5589-44.505 11.072-81.858 4.6875-115.88l-1.0312-5.4688 11.156 1.25c20.153 2.2775 28.744-0.01 38.5-10.281 3.5029-3.6879 6.6801-5.1806 12.969-6.0312 19.822-2.681 45.884-9.4494 66.719-17.344 19.36-7.3356 19.01-6.7254 13.812-23.875-1.7644-5.8219-5.4678-18.628-8.2187-28.438-6.6345-23.659-16.206-54.521-26.125-84.188-7.2615-21.717-7.9877-25.166-7.0313-33.406 1.3574-11.695-1.1242-20.956-7.0312-26.219-4.2643-3.7994-4.7206-5.2796-5.7188-19.312-1.0222-14.37-7.3059-43.662-10.781-50.156-0.8755-1.6358-1.5938-4.7941-1.5938-7.0312s-1.9631-9.3275-4.3437-15.75c-6.5621-17.703-18.94-30.154-40.156-40.406-8.98-4.3395-26.18-11.247-38.219-15.375-65.394-22.422-78.472-27.768-94.875-38.656-7.6668-5.0891-10.001-5.928-12.781-4.5938-14.617 7.0159-56.572 13.25-89.219 13.25-32.698-0.00037-55.625-4.5162-79.562-15.656-4.4591-2.0751-9.7568-3.7725-11.75-3.7812z" fill="#f7f7f7"/>
+                                 </g>
+                                </svg>
+                            </div>
+                            <div id="uploadedImageLayer" style="position:absolute; left:0; top:0; width:100%; height:100%; pointer-events:none;"></div>
+                        </div>
+                    </div>
+                    
+                    <!-- Size Selection with Axis Indicators -->
+                    <div class="size-selection-panel">
+                        <h4>انتخاب سایز</h4>
+                        <div class="size-options">
+                            <div class="size-option" data-size="S" data-shoulder="90" data-height="65">
+                                <span class="size-label">S</span>
+                            </div>
+                            <div class="size-option" data-size="M" data-shoulder="95" data-height="70">
+                                <span class="size-label">M</span>
+                            </div>
+                            <div class="size-option" data-size="L" data-shoulder="100" data-height="75">
+                                <span class="size-label">L</span>
+                            </div>
+                            <div class="size-option" data-size="XL" data-shoulder="105" data-height="80">
+                                <span class="size-label">XL</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Size Info Display -->
+                    <div class="size-info-display">
+                        <div class="size-info-box">
+                            <span class="size-info-text" id="sizeInfoText">سایز انتخاب کنید</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sizes Section -->
+        
+        <!-- Order Section -->
+        <section id="order" class="order-section">
+            <h2>سفارش نهایی</h2>
+            <div class="order-summary">
+                <div class="order-details">
+                    <h3>جزئیات سفارش</h3>
+                    <div class="order-item">
+                        <span class="order-label">رنگ تیشرت:</span>
+                        <span class="order-value" id="selectedColor">سفید</span>
+                    </div>
+                    <div class="order-item">
+                        <span class="order-label">طرح انتخاب شده:</span>
+                        <span class="order-value" id="selectedDesign">فایل سفارشی</span>
+                    </div>
+                    <div class="order-item">
+                        <span class="order-label">سایز:</span>
+                        <span class="order-value" id="selectedSize">انتخاب نشده</span>
+                    </div>
+                </div>
+                <div class="order-form">
+                    <h3>اطلاعات تماس</h3>
+                    <form id="orderForm" onsubmit="submitOrder(event)">
+                        <div class="form-group">
+                            <label for="name">نام و نام خانوادگی:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">شماره تلفن:</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="address">آدرس:</label>
+                            <textarea id="address" name="address" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="notes">توضیحات اضافی:</label>
+                            <textarea id="notes" name="notes"></textarea>
+                        </div>
+                        <button type="submit" class="submit-button">
+                            <i class="fas fa-paper-plane"></i>
+                            ارسال سفارش
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section">
+            <h2>تماس با ما</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>تلفن تماس</h4>
+                            <p>021-12345678</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>ایمیل</h4>
+                            <p>info@tshirtshop.ir</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>آدرس</h4>
+                            <p>تهران، خیابان ولیعصر، پلاک 123</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-telegram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 PiecePrint. تمامی حقوق محفوظ است.</p>
+        </footer>
+    </div>
+
+    <!-- Success Modal -->
+    <div id="successModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>سفارش با موفقیت ثبت شد!</h3>
+                <span class="close" onclick="closeModal()">&times;</span>
+            </div>
+            <div class="modal-body">
+                <i class="fas fa-check-circle success-icon"></i>
+                <p>سفارش شما با موفقیت ثبت شد. کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت.</p>
+                <p>شماره پیگیری: <strong id="orderNumber"></strong></p>
+            </div>
+            <div class="modal-footer">
+                <button onclick="closeModal()" class="modal-button">باشه</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
